@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+
+{%block content%}
+    <div class="blog">
+        <p class="title">{{post.title}}</p>
+        <p>{{post.body}}</p>
+        <a href="{%url 'update' post.pk%}">Tahrirlash</a>
+        <a href="{%url 'delete' post.pk%}" style="margin-left:10px;">O'chirish</a>
+    </div>
+{%endblock content%}

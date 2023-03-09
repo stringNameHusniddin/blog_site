@@ -1,0 +1,9 @@
+{%extends 'base.html'%}
+
+{%block content%}
+    <h1 class="title">{{post.title}} ni o'chirishni istaysizmi?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="o'chirish">
+    </form>
+{%endblock content%}

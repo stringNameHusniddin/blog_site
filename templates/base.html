@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    a{
+        text-decoration:none;
+    }
+    .link{
+        color:#42a5f5;
+        font-size:24px;
+    }
+    .blog{
+        width:500px;
+        background-color:#ff9800;
+        border-radius:15px;
+        padding:15px;
+        margin-top:15px;
+    }
+    .blog p{
+        color:#fff;
+        font-family:sans-serif;
+    }
+    .blog a{
+        color:#42a5f5;
+        font-size:20px;
+    }
+    .title{
+        color:#4caf50 !important;
+        font-size:25px;
+    }
+</style>
+<body>
+  <header>
+    <a class="link" href="{%url 'home'%}">Bosh sahifa</a>
+    <a class="link" href="{%url 'new'%}" style="margin-left:10px;">Yangi blog yasash</a>
+  </header>
+
+  {%block content%}
+  {%endblock content%}
+</body>
+</html>

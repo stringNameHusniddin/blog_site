@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+
+{%block content%}
+{%for i in object_list%}
+    <div class="blog">
+        <a href="{%url 'detail' i.pk%}">{{i.title}}</a>
+        <p>{{i.body | slice:":100"}}...</p>
+    </div>
+{%endfor%}
+{%endblock content%}

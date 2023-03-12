@@ -35,8 +35,17 @@
 <body>
   <header>
     <a class="link" href="{%url 'home'%}">Bosh sahifa</a>
-    <a class="link" href="{%url 'new'%}" style="margin-left:10px;">Yangi blog yasash</a>
+    <a class="link" href="{%url 'new'%}" style="margin:0 10px;">Yangi blog yasash</a>
+    {% if user.is_authenticated %}
+        <a class="link" href="{%url 'logout'%}">Saytdan chiqish</a>
+    {% else %}
+        <a class="link" href="{%url 'login'%}">Saytga kirish</a>
+        <a class="link" href="{%url 'signup'%}" style="margin-left:10px;">Ro'yxatdan o'tish</a>
+    {% endif %}
   </header>
+  {% if user.is_authenticated %}
+    <p class="title">Xush kelibsiz, {{user.username}}</p>
+  {% endif %}
 
   {%block content%}
   {%endblock content%}
